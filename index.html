@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ASD Screening</title>
+</head>
+<body>
+    <h2>Autism Spectrum Disorder Screening</h2>
+    <form method="post" action="/predict">
+        {% for i in range(1, 11) %}
+            <label>A{{ i }}_Score (0 or 1):</label>
+            <input type="number" name="A{{ i }}_Score" min="0" max="1" required><br>
+        {% endfor %}
+
+        <label>Age:</label>
+        <input type="number" name="age" min="1" max="100" required><br>
+
+        <label>Jaundice at birth (0 or 1):</label>
+        <input type="number" name="jundice" min="0" max="1" required><br>
+
+        <label>Family member with ASD (0 or 1):</label>
+        <input type="number" name="austim" min="0" max="1" required><br><br>
+
+        <input type="submit" value="Predict">
+    </form>
+
+    {% if prediction_text %}
+        <h3>{{ prediction_text }}</h3>
+    {% endif %}
+</body>
+</html>
