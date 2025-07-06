@@ -11,14 +11,14 @@ This repository contains a deployed machine learning web application for screeni
 
 ## Project Structure
 
-autism-flask-app/
-├── app.py
-├── autism_model.pkl
-├── templates/
-│ └── index.html
-├── Dockerfile
-├── .dockerignore
-├── Deployment_Report.pdf
+ -autism-flask-app/
+ -├── app.py
+ -├── autism_model.pkl
+ -├── templates/
+ -│ └── index.html
+ -├── Dockerfile
+ -├── .dockerignore
+ -├── Deployment_Report.pdf
 
 
 ## [Open Deployed App on Google Cloud Run](https://autism-flask-app-351118108840.europe-west1.run.app)
